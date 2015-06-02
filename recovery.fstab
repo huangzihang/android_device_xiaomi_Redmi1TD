@@ -1,10 +1,12 @@
-# mount point	fstype    device    	[device2]
+# mount point	fstype		device			[device2]
+#/*BEGIN PN:DTS2014091200061  Modified by p00285063, 2013/09/12*/
+/dev/bootimg			/boot			emmc		defaults	defaults
+/dev/block/mmcblk0p6		/cache			ext4		defaults	defaults
+/dev/block/mmcblk0p7		/data			ext4		defaults	defaults
+/dev/misc			/misc			emmc		defaults	defaults
+/dev/recovery			/recovery		emmc		defaults	defaults
+/dev/block/mmcblk1p1		/external_sd		vfat		defaults	defaults
+/dev/block/mmcblk0p5		/system			ext4		defaults	defaults
+/dev/block/mmcblk0p8		/fat			vfat    	defaults	defaults		
 
-/boot       mtd         boot
-/cache      yaffs2      cache
-/data       yaffs2      userdata
-/misc       mtd         misc
-/recovery   mtd         recovery
-/sdcard     vfat        /dev/block/mmcblk0p1        /dev/block/mmcblk0
-/system     yaffs2      system
-/sd-ext     ext4        /dev/block/mmcblk0p2
+
